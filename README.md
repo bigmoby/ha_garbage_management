@@ -15,16 +15,16 @@ A mini Home Assistant step-by-step tutorial on how to manage your household wast
 
 * Search and select "Local calendar" and add a new calendar, for example, "Glass Collection."
 
-![Add event](new_calendar.png "a title")
+![New local calendar](new_calendar.png "New local calendar")
 
 
 * Navigate to the "Calendar" section, and you will find the newly created calendar ("Glass Collection").
 
-![Add event](calendar.png "a title")
+![Calendar section](calendar.png "Calendar section")
 
 * In the calendar section you just created, click on the "Add Event" button to create an event for glass collection. Modify it as follows (for example): 
 
-![Add event](add_event.png "a title")
+![Add event](add_event.png "Add event")
 
 * Click "Add event" to confirm the addition of the event to the calendar.
 
@@ -111,5 +111,9 @@ cards:
 ```
 
 Please, repeat from the calendar creation step for all garbage type you want.
+
+...and something like this should appear:
+
+![Lovelace example](sample.png "Lovelace example")
 
 Credits [@bruxy70](https://github.com/bruxy70). Thank you!
