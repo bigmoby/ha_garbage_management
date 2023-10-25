@@ -87,7 +87,7 @@ cards:
       - type: vertical-stack
         cards:
           - type: 'custom:button-card'
-            name: Carta
+            name: Glass
             template: label_center 
             styles:
               card:
