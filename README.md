@@ -68,9 +68,46 @@ cd garbage_images
 * Download the files from their respective URLs using the wget command. For example:
 
 ```
-wget https://example.com/path/to/bidone_gray.png
-wget https://example.com/path/to/bidone_orange.png
-wget https://example.com/path/to/bidone_green.png
+wget 'https://github.com/bigmoby/ha_garbage_management/raw/main/bidone_gray.png' -O bidone_gray.png
+wget 'https://github.com/bigmoby/ha_garbage_management/raw/main/bidone_orange.png' -O bidone_orange.png
+wget 'https://github.com/bigmoby/ha_garbage_management/raw/main/bidone_green.png' -O bidone_green.png
 ```
 
+* Restart Home Assistant
+
 Now, you can configure the garbage bin images in the Lovelace interface by using these images from the `/local/garbage_images/` directory.
+
+* Open a Dashboard in yaml edit mode and add this snippet into it:
+
+```
+type: vertical-stack
+cards:
+  - type: horizontal-stack
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: 'custom:button-card'
+            name: Carta
+            template: label_center 
+            styles:
+              card:
+                - padding-top: 0px 
+                - padding-bottom: 0px 
+          - type: custom:config-template-card
+            entities: 
+              - sensor.glass_collection_schedule
+            variables: 
+              DAYS: states['sensor.glass_collection_schedule'].attributes['days'] + ' days'
+            card:
+              type: picture-entity
+              entity: sensor.glass_collection_schedule
+              name: "${DAYS}"
+              show_name: true
+              show_state: false
+              state_image:
+                '0': /local/garbage_images/bidone.png
+                '1': /local/garbage_images/bidone_green.png
+                '2': /local/garbage_images/bidone_gray.png
+```
+
+Please, repeat from the calendar creation step for all garbage type you want.
