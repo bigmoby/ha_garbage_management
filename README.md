@@ -5,7 +5,7 @@ A mini Home Assistant step-by-step tutorial on how to manage your household wast
 
 * Make sure you have Home Assistant and HACS (Home Assistant Community Store) installed and configured.
 
-+ Install the frontend components `config-template-card` and `button-card` via HACS.
++ Install the frontend components `config-template-card` and `button-card` via [HACS](https://hacs.xyz/).
 
 ### Creating the Calendar:
 
