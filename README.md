@@ -112,4 +112,4 @@ cards:
 
 Please, repeat from the calendar creation step for all garbage type you want.
 
-Credits @bruxy70. Thank you!
+Credits [@bruxy70](https://github.com/bruxy70). Thank you!
